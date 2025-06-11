@@ -229,19 +229,3 @@ A aplicação implementa tratamento robusto para diversos cenários de erro:
 ### Erros de Estado
 - **Expressão vazia**: Entrada sem conteúdo
 - **Estruturas não vazias**: Verificação de integridade pós-cálculo
-
-## 🔧 Personalização e Extensão
-
-### Adicionando Novos Operadores
-
-1. **Atualize o método `isOperator()`**:
-```java
-private boolean isOperator(String token) {
-    return "+-*/%^".contains(token); // Adicionado '^' para potência
-}
-```
-
-2. **Estenda o método `evaluate()`**:
-```java
-case "^": return Math.pow(a, b);
-```
